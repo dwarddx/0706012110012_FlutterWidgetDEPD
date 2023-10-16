@@ -36,7 +36,7 @@ class _HomePageState extends State<HomePage> {
               Colors.white,
               Color.fromARGB(255, 255, 249, 188),
               Color.fromARGB(255, 255, 234, 0)
-            ], // Atur warna gradien sesuai keinginan Anda
+            ],
           ),
         ),
         width: double.infinity,
@@ -58,8 +58,8 @@ class _HomePageState extends State<HomePage> {
                     Positioned(
                       top: 20,
                       right: 20,
-                      width: 60.0, // Atur sesuai kebutuhan Anda
-                      height: 60.0, // Atur sesuai kebutuhan Anda
+                      width: 60.0, 
+                      height: 60.0,
                       child: GestureDetector(
                         onTap: toggleLove,
                         child: Container(
@@ -72,7 +72,7 @@ class _HomePageState extends State<HomePage> {
                               Icons.favorite,
                               color: isLoved ? Colors.grey : Colors.red,
                               size:
-                                  25.0, // Atur ukuran ikon sesuai kebutuhan Anda
+                                  25.0,
                             ),
                           ),
                         ),
@@ -92,11 +92,11 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
                           aspectRatio:
-                              1.0, // Set aspek rasio menjadi 1:1 untuk membuat gambar menjadi kotak
+                              1.0,
                           child: Image.asset(
                             'images/spain.png',
                             fit: BoxFit
-                                .cover, // Menggunakan BoxFit.cover untuk mengisi seluruh kotak
+                                .cover,
                           ),
                         ),
                       ),
@@ -109,11 +109,11 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
                           aspectRatio:
-                              1.0, // Set aspek rasio menjadi 1:1 untuk membuat gambar menjadi kotak
+                              1.0,
                           child: Image.asset(
                             'images/Real-Madrid-Logo.png',
                             fit: BoxFit
-                                .cover, // Menggunakan BoxFit.cover untuk mengisi seluruh kotak
+                                .cover,
                           ),
                         ),
                       ),
@@ -126,11 +126,11 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
                           aspectRatio:
-                              1.0, // Set aspek rasio menjadi 1:1 untuk membuat gambar menjadi kotak
+                              1.0,
                           child: Image.asset(
                             'images/laliga.png',
                             fit: BoxFit
-                                .cover, // Menggunakan BoxFit.cover untuk mengisi seluruh kotak
+                                .cover,
                           ),
                         ),
                       ),
@@ -143,11 +143,11 @@ class _HomePageState extends State<HomePage> {
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
                           aspectRatio:
-                              1.0, // Set aspek rasio menjadi 1:1 untuk membuat gambar menjadi kotak
+                              1.0,
                           child: Image.asset(
                             'images/belingham.png',
                             fit: BoxFit
-                                .cover, // Menggunakan BoxFit.cover untuk mengisi seluruh kotak
+                                .cover,
                           ),
                         ),
                       ),
