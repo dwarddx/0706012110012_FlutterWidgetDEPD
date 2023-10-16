@@ -8,12 +8,12 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool isLoved = false;
-  String buttonPressed = "Button sudah ditombol";
+  bool isFav = false;
+  String buttonPressed = "Button sudah ditekan";
 
   void toggleLove() {
     setState(() {
-      isLoved = !isLoved;
+      isFav = !isFav;
     });
   }
 
@@ -70,7 +70,7 @@ class _HomePageState extends State<HomePage> {
                           child: Center(
                             child: Icon(
                               Icons.favorite,
-                              color: isLoved ? Colors.grey : Colors.red,
+                              color: isFav ? Colors.grey : Colors.red,
                               size:
                                   25.0,
                             ),
