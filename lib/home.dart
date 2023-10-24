@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_widget_a1/booking.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -15,6 +16,27 @@ class _HomePageState extends State<HomePage> {
     setState(() {
       isFav = !isFav;
     });
+  }
+
+  Widget buildBookNowButton() {
+    return ElevatedButton(
+      onPressed: () {
+        Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => BookingPage()),
+        );
+      },
+      style: ElevatedButton.styleFrom(
+        primary: Colors.white,
+        onPrimary: const Color.fromARGB(255, 222, 201, 14),
+        elevation: 5,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
+        ),
+        padding: EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+      ),
+      child: Text('Book Now', style: TextStyle(fontSize: 18)),
+    );
   }
 
   @override
@@ -58,7 +80,7 @@ class _HomePageState extends State<HomePage> {
                     Positioned(
                       top: 20,
                       right: 20,
-                      width: 60.0, 
+                      width: 60.0,
                       height: 60.0,
                       child: GestureDetector(
                         onTap: toggleLove,
@@ -71,8 +93,7 @@ class _HomePageState extends State<HomePage> {
                             child: Icon(
                               Icons.favorite,
                               color: isFav ? Colors.grey : Colors.red,
-                              size:
-                                  25.0,
+                              size: 25.0,
                             ),
                           ),
                         ),
@@ -89,14 +110,12 @@ class _HomePageState extends State<HomePage> {
                     child: Container(
                       margin: EdgeInsets.fromLTRB(4, 8, 4, 8),
                       child: ClipRRect(
-                        borderRadius: BorderRadius.circular(8),
+                        borderRadius: BorderRadius.circular(30),
                         child: AspectRatio(
-                          aspectRatio:
-                              1.0,
+                          aspectRatio: 1.0,
                           child: Image.asset(
                             'images/spain.png',
-                            fit: BoxFit
-                                .cover,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -108,12 +127,10 @@ class _HomePageState extends State<HomePage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
-                          aspectRatio:
-                              1.0,
+                          aspectRatio: 1.0,
                           child: Image.asset(
                             'images/Real-Madrid-Logo.png',
-                            fit: BoxFit
-                                .cover,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -125,12 +142,10 @@ class _HomePageState extends State<HomePage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
-                          aspectRatio:
-                              1.0,
+                          aspectRatio: 1.0,
                           child: Image.asset(
                             'images/laliga.png',
-                            fit: BoxFit
-                                .cover,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -142,12 +157,10 @@ class _HomePageState extends State<HomePage> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(8),
                         child: AspectRatio(
-                          aspectRatio:
-                              1.0,
+                          aspectRatio: 1.0,
                           child: Image.asset(
                             'images/belingham.png',
-                            fit: BoxFit
-                                .cover,
+                            fit: BoxFit.cover,
                           ),
                         ),
                       ),
@@ -182,6 +195,8 @@ class _HomePageState extends State<HomePage> {
           ],
         ),
       ),
+      floatingActionButton: buildBookNowButton(),
+      floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
     );
   }
 }

@@ -60,11 +60,11 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-      - images/santiago-b.jpg
-      - images/Real-Madrid-Logo.png
-      - images/belingham.png
-      - images/laliga.png
-      - images/spain.png
+      - images/
+ #     - images/Real-Madrid-Logo.png
+ #     - images/belingham.png
+ #     - images/laliga.png
+ #     - images/spain.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
